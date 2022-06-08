@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "appmovie-eddc9": {
+      "hosting": {
+        "movies-website-angular": [
+          "appmovie-eddc9"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "appmovie-eddc9"
+  }
+}

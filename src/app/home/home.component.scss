@@ -1,0 +1,30 @@
+.home-container{
+    .all-movies{
+        min-height: calc(100vh - 60px);
+        padding: 20px 40px;
+        .navbar{
+            .navbar-brand{
+                border-left: 8px solid #AD202D;
+                padding-left: 8px;
+            }
+            .btn{
+                font-weight: 800;
+                color: #AD202D;
+                box-shadow: none;
+            }
+        }
+        .movie{
+            width: 18rem;
+            img{
+                height: 300px;
+                object-fit: cover;
+            }
+        }
+    }
+    .popular-movies{
+        min-height: calc(100vh - 60px);
+        border: 1px solid black;
+        padding: 20px 40px;
+    }
+}
+

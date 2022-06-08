@@ -1,0 +1,9 @@
+<form #form="ngForm" (ngSubmit)="addReview(review.value)">
+    <div class="mb-3">
+        <label for="password" class="form-label">You're Review :</label>
+        <textarea #review type="password" class="form-control" id="password"></textarea>
+    </div>
+    <p class="errorMessage" *ngIf="errorMessage">* {{errorMessage}}</p>
+    <div *ngIf="isLoading" class="loadingio-spinner-dual-ball-eg8vo25ctse"><div class="ldio-uvxi7bp66l"><div></div><div></div><div></div></div></div>
+    <button *ngIf="!isLoading" type="submit" class="btn btn-review">SUBMIT YOU'RE REVIEW</button>
+</form>

@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #771721;
+
+    .navbar-brand{
+        color: white;
+        font-weight: 800;
+    }
+    li{
+        list-style: none;
+        a.nav-link{
+            color: white !important;
+            font-weight: 800;     
+        }
+    }
+}

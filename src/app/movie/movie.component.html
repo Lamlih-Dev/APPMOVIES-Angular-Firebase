@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<div class="container mt-4">
+    <div *ngIf="isLoading" class="loadingio-spinner-ellipsis-huwkmw2d0fi"><div class="ldio-rp6qpts492h"><div></div><div></div><div></div><div></div><div></div></div></div>
+    <div *ngIf="!isEmpty && !isLoading">
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center align-items-start">
+                <img class="cover-img mt-3" src={{movie[0]?.cover}} alt="">
+            </div>
+            <div class="col-md-6 d-flex flex-column mt-5 mb-5">
+                <h1 class="">{{movie[0]?.name}}</h1> 
+                <app-star-rating [rating]="movie[0]?.rating" [isReadOnly]="true"></app-star-rating>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quos, in similique quidem enim hic reiciendis! Modi provident ad consectetur ea assumenda, itaque beatae voluptas voluptate sit debitis ipsa quia.</p>
+                <div>
+                    <button class="btn btn-review mt-3" *ngIf="!showReview" (click)="showReviewComponent()">GIVE US YOUR OPINION ABOUT THIS MOVIE</button>
+                    <app-review *ngIf="showReview" [id]="id" [type]="type"></app-review>
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mt-5 mb-5">
+            <h3>Reviews</h3>
+            <hr>
+            <div class="reviews">
+                <div *ngIf="movie[0]?.reviews?.length !== 0">
+                    <div class="review" *ngFor="let review of movie[0]?.reviews">
+                        <div class="review-details">
+                            <div class="author">{{ review.author }}</div>
+                            <div class="date">Date : {{ review.published_on | date: "dd-mm-yyyy" }}</div>
+                            <div class="rev">Review : {{ review.review }}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="no-review" *ngIf="movie[0]?.reviews?.length === 0">No review yet, be the first one and let poeple know you're oppinion about this movie</div>
+            </div>
+        </div>
+    </div>
+    <h1 class="mt-5" *ngIf="isEmpty && !isLoading">Error 404, Movie Not Found !</h1>
+</div>

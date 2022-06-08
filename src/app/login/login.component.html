@@ -1,0 +1,52 @@
+<div class="login-container">
+    <div class="login-content">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 left text-center">
+                <div class="content">
+                    <p>Nice to see you</p>
+                    <h1>WELCOME TO APPMOVIE</h1>
+                    <span class="line"></span>
+                    <p>
+                        Best movie platform, where you can see and write movies reviews. 
+                        We guarantee you the best movies selection,
+                        so what are you waiting for ? Login to get started.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 right" *ngIf="showLoginForm">
+                <h1>SIGN IN</h1>
+                <form #form1="ngForm" (ngSubmit)="login(username1.value, password1.value)">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username :</label>
+                        <input #username1 type="text" class="form-control" id="username" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password :</label>
+                        <input #password1 type="password" class="form-control" id="password">
+                    </div>
+                    <p (click)="showLoginForm = false" class="account-message">Need an account? Click Here.</p>
+                    <p class="errorMessage" *ngIf="errorMessage1">* {{errorMessage1}}</p>
+                    <div *ngIf="isLoading" class="loadingio-spinner-dual-ball-eg8vo25ctse"><div class="ldio-uvxi7bp66l"><div></div><div></div><div></div></div></div> 
+                    <button *ngIf="!isLoading" type="submit" class="btn btn-primary">LOGIN</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-md-12 right" *ngIf="!showLoginForm">
+                <h1>SIGN UP</h1>
+                <form #form2="ngForm" (ngSubmit)="signUp(username2.value, password2.value)">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username :</label>
+                        <input #username2 type="text" class="form-control" id="username" autocomplete="off">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password :</label>
+                        <input #password2 type="password" class="form-control" id="password">
+                    </div>
+                    <p (click)="showLoginForm = true" class="account-message">Already a user? Login.</p>
+                    <p class="errorMessage" *ngIf="errorMessage2">* {{errorMessage2}}</p>
+                    <div *ngIf="isLoading" class="loadingio-spinner-dual-ball-eg8vo25ctse"><div class="ldio-uvxi7bp66l"><div></div><div></div><div></div></div></div>
+                    <button *ngIf="!isLoading" type="submit" class="btn btn-primary">CREATE NEW ACCOUNT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

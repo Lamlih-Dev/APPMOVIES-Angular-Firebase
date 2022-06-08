@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="home-container container-fluid">
+    <div class="all-movies">
+        <div class="tranding-movies navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <h4 class="navbar-brand" routerLink="">Trending Movies</h4>
+                <button class="btn">View More</button>
+            </div>
+        </div>
+        <div *ngIf="isTrendingLoading" class="loadingio-spinner-ellipsis-huwkmw2d0fi"><div class="ldio-rp6qpts492h"><div></div><div></div><div></div><div></div><div></div></div></div>
+        <div *ngIf="!isTrendingLoading" class="movies-thumbnail row gap-2 mt-3 d-flex justify-content-center">
+            <div class="movie card col-md-3" *ngFor="let movie of trandingMovies">
+                <img class="card-img-top" src={{movie.cover}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.name}}</h5>
+                    <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary" (click)="goToMovieDetails('trending-movies', movie.id)">More Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="theatre-movies navbar navbar-expand-lg mt-5">
+            <div class="container-fluid">
+                <h4 class="navbar-brand" routerLink="">Popular In Theatres</h4>
+                <button class="btn">View More</button>
+            </div>
+        </div>
+        <div *ngIf="isTheatreLoading" class="loadingio-spinner-ellipsis-huwkmw2d0fi"><div class="ldio-rp6qpts492h"><div></div><div></div><div></div><div></div><div></div></div></div>
+        <div *ngIf="!isTheatreLoading" class="movies-thumbnail row gap-2 mt-3 d-flex justify-content-center">
+            <div class="movie card col-xm" *ngFor="let movie of theatreMovies">
+                <img class="card-img-top" src={{movie.cover}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{movie.name}}</h5>
+                    <app-star-rating [rating]="movie.rating" [isReadOnly]="true"></app-star-rating>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a class="btn btn-primary" (click)="goToMovieDetails('theatre-movies', movie.id)">More Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
