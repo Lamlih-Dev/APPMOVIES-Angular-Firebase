@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,SAAS,EAAE,MAAM;EACjB,KAAK,EAAE,OAAO;CACjB;;AACD,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,OAAO;CACjB;;AACD,AAAA,IAAI,CAAC;EACD,KAAK,EAAE,OAAO;CACjB;;AACD,AAAA,OAAO,AAAA,IAAI,CAAC;EACR,KAAK,EAAE,OAAO;CACjB",
-    "sources": [
-        "../star-rating/star-rating.component.scss"
-    ],
-    "names": [],
-    "file": "star-rating.component.css"
-}
