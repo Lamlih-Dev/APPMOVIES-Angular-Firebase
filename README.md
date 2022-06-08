@@ -17,5 +17,5 @@ When i was building this app i used different topics such us:
   <li>Template-driven Forms</li>
   <li>Data Binding</li>
   <li>Decorators</li>
-</ul>
+</ul><br><br>
 So now i guess it's time to move to the Angular advanced topics !
