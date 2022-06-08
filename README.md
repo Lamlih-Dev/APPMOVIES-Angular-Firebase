@@ -17,5 +17,6 @@ When i was building this app i used different topics such us:
   <li>Template-driven Forms</li>
   <li>Data Binding</li>
   <li>Decorators</li>
-</ul><br><br>
+</ul><br>
+Live link: https://lamlih-dev.github.io/APPMOVIES-Angular-Firebase/.
 So now i guess it's time to move to the Angular advanced topics !
